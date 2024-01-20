@@ -45,7 +45,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="px-6 py-2.5 mx-1.5 transition rounded-xl bg-gradient-to-r from-blue-500 to-purple-700 text-white hover:from-blue-600 hover:to-purple-800 text-xl font-roboto font-medium flex items-center">
+                            <a href="#" class="px-6 py-2.5 mx-1.5 transition rounded-xl bg-gradient-to-r from-indigo-500 to-blue-800 text-white hover:from-indigo-600 hover:to-blue-900 text-xl font-roboto font-medium flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 inline mr-3">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                                 </svg>
@@ -79,37 +79,93 @@
                 </div>
                 
                 <div class="flex justify-center mt-20">
-                    <div class="w-5/6 rounded-2xl bg-white shadow-gray-300 shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex divide-x z-10">
-                        <div class="p-9 flex-1">
-                            <h1 class="text-4xl">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-11 h-11 inline">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-                                </svg>                          
-                                Explain Code
-                            </h1>
-                            <p class="text-lg text-gray-600 pt-3 pb-6">
-                                Explain some code based on the syntax provided
-                            </p>
-                            <h3 class="text-xl font-medium">
-                                Paste your code below:
-                            </h3>
-                            <p class="font-medium bg-gray-100 rounded-lg p-6 pb-16 mt-3">
-                                <span class="text-purple-700">function</span> <span class="text-red-600">HelloWorld</span>(text){
-                                    <br> &nbsp;&nbsp;&nbsp; echo text || <span class="text-green-600">"Hello World"</span>; 
-                                    <br>
-                                }
-                            </p>
-                            <a href="#" class="mt-96 transition rounded-xl bg-gradient-to-r from-blue-500 to-purple-700 text-white hover:from-blue-600 hover:to-purple-800 text-xl font-roboto font-medium">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z" />
-                                </svg>
-                                Enhance with AI
-                            </a>
+                    <div class="w-5/6 z-10">
+                        <div class="flex divide-x bg-white shadow-gray-300 shadow-[0_0_30px_0_rgba(0,0,0,0.3)] rounded-2xl">
+                            <div class="p-9 flex-1">
+                                <h1 class="text-4xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-11 h-11 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                    </svg>                          
+                                    Explain Code
+                                </h1>
+                                <p class="text-lg text-gray-600 pt-3 pb-6">
+                                    Explain some code based on the syntax provided
+                                </p>
+                                <h3 class="text-xl font-medium">
+                                    Paste your code below:
+                                </h3>
+                                <div class=" bg-gray-100 rounded-lg p-6 pb-16 mt-3">
+                                    <p class="font-medium">
+                                        <span class="text-purple-700">function</span> <span class="text-red-600">HelloWorld</span>(text){
+                                            <br> &nbsp;&nbsp;&nbsp; echo text || <span class="text-green-600">"Hello World"</span>; 
+                                            <br>
+                                        }
+                                    </p>
+                                </div>
+                                <button class="mt-8 py-4 px-7 transition rounded-xl bg-gradient-to-r from-indigo-500 to-blue-800 text-white hover:from-indigo-600 hover:to-blue-900 text-xl font-medium">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline mr-2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z" />
+                                        </svg>
+                                        Enhance with AI
+                                </button>
+                            </div>
+                            <div class="p-9 flex-1">
+                                <h3 class="text-2xl items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="white" class="w-8 h-8 inline mr-2 p-2 font-bold bg-gray-800 rounded-full">
+                                        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                    </svg>
+                                    What does this code do?
+                                </h3>
+                                <p class="text-lg text-gray-600 py-3">
+                                    The following code does:
+                                </p>
+                                <div class="divide-y">
+                                    <div class="flex py-3">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="w-6 h-6 inline mr-4 p-1.5 font-bold bg-gray-300 rounded-full">
+                                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg font-medium">
+                                                The code above is a function definition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex py-3">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="w-6 h-6 inline mr-4 p-1.5 font-bold bg-gray-300 rounded-full">
+                                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg font-medium">
+                                                It defines a new function called `HelloWorld` that takes a single argument called `text`
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex py-3">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="w-6 h-6 inline mr-4 p-1.5 font-bold bg-gray-300 rounded-full">
+                                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg font-medium">
+                                                The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-7 py-2.5 px-5 transition rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 text-xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline mr-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z" />
+                                    </svg>
+                                    Copy Output
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-9 flex-1">
-                            <h3>
-                                What does this code do?
-                            </h3>
+                        <div>
                             
                         </div>
                     </div>
@@ -118,7 +174,7 @@
             <img src="Media/orange_dot_pattern.svg" class="absolute top-10 right-10 -z-10" alt="">
         </section>
 
-        <section class="relative bg-gradient-to-r from-blue-500 to-purple-700 h-screen -mt-20">
+        <section class="relative bg-gradient-to-r from-indigo-500 to-blue-800 h-screen -mt-44">
             <div class="container mx-auto">
                 <div>
                         <h1 class="pt-14 pb-9 text-center text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 from-20% to-indigo-500">
